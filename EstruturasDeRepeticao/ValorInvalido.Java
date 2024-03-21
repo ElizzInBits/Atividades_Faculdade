@@ -8,20 +8,23 @@ public class ValorInvalido {
 
 	public static void main(String[] args) {
 
-		String valor;
-		double nota;
-
-		do {
-			valor = JOptionPane.showInputDialog("Informe uma nota entre 0 e 10: ");
-			nota = Double.parseDouble(valor);
-
-			if (nota < 0 || nota > 10) {
-				JOptionPane.showMessageDialog(null, "Valor errado, digite novamente");
-			}
-
-		} while (nota < 0 || nota > 10);
-		JOptionPane.showMessageDialog(null, nota + " Programa encerrado");
-
+		String valor = JOptionPane.showInputDialog("Informe uma nota de 0 a 10: ");
+		
+		double numero = Double.parseDouble(valor);
+		
+		boolean menor = numero < 0;
+		boolean maior = numero > 10;
+	
+		double valor2;
+		
+		while (menor || maior) {
+			JOptionPane.showMessageDialog(null, "Erro \nTente novamete");
+			
+			String valor1 = JOptionPane.showInputDialog("Informe uma nota de 0 a 10: ");
+			
+			valor2 = Double.parseDouble(valor1);
+		}
+		JOptionPane.showMessageDialog(null, "Programa encerrado");
 	}
 
 }
