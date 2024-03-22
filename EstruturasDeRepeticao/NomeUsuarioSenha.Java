@@ -5,7 +5,7 @@ package EstruiturasDeRepeticao;
 
 import javax.swing.JOptionPane;
 
-public class NomeUsuarioSenha2 {
+public class NomeUsuarioSenha {
 	public static void main(String[] args) {
 
 		String nome, senha;
