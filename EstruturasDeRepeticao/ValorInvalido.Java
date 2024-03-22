@@ -18,7 +18,7 @@ public class ValorInvalido {
 		double valor2;
 		
 		while (menor || maior) {
-			JOptionPane.showMessageDialog(null, "Erro \nTente novamete");
+			JOptionPane.showMessageDialog(null, "Erro \nTente novamete!");
 			
 			String valor1 = JOptionPane.showInputDialog("Informe uma nota de 0 a 10: ");
 			
