@@ -6,6 +6,7 @@
 
 Este repositório está organizado em três pastas, representando as diferentes fases do trabalho:
 
+##### perfilDoAluno 
 - **Fase 1**
 - **Fase 2**
 - **Fase 3**
