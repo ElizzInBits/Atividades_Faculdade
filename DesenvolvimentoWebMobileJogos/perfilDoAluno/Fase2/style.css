@@ -16,7 +16,7 @@ body {
     margin: 0 auto;
 }
 
-.carousel {
+.carrossel {
     position: relative;
     width: 100%;
     max-width: 500px;
@@ -25,16 +25,16 @@ body {
     border-radius: 10%;
 }
 
-.carousel-images {
+.carrossel-imagens {
     display: flex;
     transition: transform 0.5s ease;
 }
 
-.carousel-item {
+.carrossel-item {
     min-width: 100%;
 }
 
-.carousel-item img {
+.carrossel-item img {
     width: 100%;
     height: auto;
     display: block;
@@ -44,7 +44,7 @@ input[type="radio"] {
     display: none;
 }
 
-.carousel-indicators {
+.carrossel-indicadores {
     position: absolute;
     bottom: 10px;
     left: 50%;
@@ -53,7 +53,7 @@ input[type="radio"] {
     gap: 10px;
 }
 
-.carousel-indicators label {
+.carrossel-indicadores label {
     width: 15px;
     height: 15px;
     background-color: #bbb;
@@ -62,25 +62,25 @@ input[type="radio"] {
     transition: background-color 0.3s ease;
 }
 
-.carousel-indicators label:hover {
+.carrossel-indicadores label:hover {
     background-color: #333;
 }
 
-#img1:checked ~ .carousel-images {
+#img1:checked ~ .carrossel-imagens {
     transform: translateX(0);
 }
 
-#img2:checked ~ .carousel-images {
+#img2:checked ~ .carrossel-imagens {
     transform: translateX(-100%);
 }
 
-#img3:checked ~ .carousel-images {
+#img3:checked ~ .carrossel-imagens {
     transform: translateX(-200%);
 }
 
-#img1:checked ~ .carousel-indicators label:nth-child(1),
-#img2:checked ~ .carousel-indicators label:nth-child(2),
-#img3:checked ~ .carousel-indicators label:nth-child(3) {
+#img1:checked ~ .carrossel-indicadores label:nth-child(1),
+#img2:checked ~ .carrossel-indicadores label:nth-child(2),
+#img3:checked ~ .carrossel-indicadores label:nth-child(3) {
     background-color: #333;
 }
 
@@ -109,12 +109,12 @@ ul li {
     margin: 5px 0;
 }
 
-.social-media ul {
+.redes-sociais ul {
     display: flex;
     gap: 10px;
 }
 
-.social-media img {
+.redes-sociais img {
     width: 30px;
     height: 30px;
 }
