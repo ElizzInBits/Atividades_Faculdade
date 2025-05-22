@@ -60,33 +60,39 @@
 
         <div class="info-item">
             <h2>Email</h2>
-            <p>elizabeth.miranda174394@gmail.com</p>
+            <input type="email" id="email" placeholder="exemplo@email.com" />
+            <span id="email incorreto" style="color: red;"></span>
+        </div>
+
+        <div class="info-item">
+            <h2>CPF</h2>
+            <input type="text" id="cpf" placeholder="123.456.789-00" />
+            <span id="cpf-incorreto" style="color: red;"></span>
         </div>
 
         <div class="info-item">
             <h2>UC já Cursadas</h2>
-            <ul>
-                <li>Ambientes Computacionais e Conectiviadade</li>
-                <li>Sistemas Computacionais e Segurança</li>
-                <li>Modelagem de Software</li>
-                <li>Programação de Soluções Computacionais</li>
-                <li>Análise de Big Data</li>
-                <li>Inteligência Atificial</li>
-                <li>Gestão de qualidade de Software</li>
-                <li>Usabilidade, Desenvolvimento web, mobile e jogos</li>
+            <ul id="uc-lista">
+                <li>Ambientes Computacionais e Conectiviadade <button onclick="moveUp(this)">⬆️</button> <button onclick="moveDown(this)">⬇️</button></li>
+                <li>Sistemas Computacionais e Segurança <button onclick="moveUp(this)">⬆️</button> <button onclick="moveDown(this)">⬇️</button></li>
+                <li>Modelagem de Software <button onclick="moveUp(this)">⬆️</button> <button onclick="moveDown(this)">⬇️</button></li>
+                <li>Programação de Soluções Computacionais <button onclick="moveUp(this)">⬆️</button> <button onclick="moveDown(this)">⬇️</button></li>
+                <li>Análise de Big Data <button onclick="moveUp(this)">⬆️</button> <button onclick="moveDown(this)">⬇️</button></li>
+                <li>Inteligência Atificial <button onclick="moveUp(this)">⬆️</button> <button onclick="moveDown(this)">⬇️</button></li>
+                <li>Gestão de qualidade de Software <button onclick="moveUp(this)">⬆️</button> <button onclick="moveDown(this)">⬇️</button></li>
+                <li>Usabilidade, Desenvolvimento web, mobile e jogos <button onclick="moveUp(this)">⬆️</button> <button onclick="moveDown(this)">⬇️</button></li>
             </ul>
-            <form action="">
-                <label>Adicionar UC</label>
-                <textarea placeholder="Digite a UC" minlength="20"></textarea>
-                <button type="submit">Enviar</button>
-            </form>
+            <button id="add-uc"> Adicionar nova UC</button>
         </div>
      </div>   
 
     <div class="perfil-text">
         <div class="section">
             <h2>Pefil Pessoal</h2>
-            <p>No meu tempo livre, gosto de sair para andar de skate, ficar em casa jogando algum game ou assistindo algo. Também gosto de cozinhar para alguém e estou sempre escutando música, porque acho que minha vida precisa ter uma trilha sonora de fundo. </p>
+            <p id="perfil-pessoal-texto">No meu tempo livre, gosto de sair para andar de skate, ficar em casa jogando algum game ou assistindo algo. Também gosto de cozinhar para alguém e estou sempre escutando música, porque acho que minha vida precisa ter uma trilha sonora de fundo. </p>
+
+            <textarea id="nova-info" rows="3" placeholder="Adicione mais sobre você..."></textarea><br>
+            <button onclick="adicionarInfoPerfil()">Adicionar</button>
         </div>
 
         <div class="info-item">
@@ -108,5 +114,7 @@
         </ul>
     </div>
 </div>
+
+<script src="script.js"></script>
 </body>
 </html>
