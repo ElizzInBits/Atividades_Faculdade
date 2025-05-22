@@ -1,28 +1,30 @@
-function adicionarUC(){
-    const novaUC = prompt("Digite o nome da nova UC: ")
+function adicionarUC() {
+    const novaUC = prompt("Digite o nome da nova UC:");
     if (novaUC && novaUC.trim() !== "") {
         const li = document.createElement("li");
-        li.innerHTML = '${novaUC} <button onclick="moveUp(this)">⬆️</button> <button onclick="moveDown(this)">⬇️</button>';
-        document.getElementsById("uc-lista").appendChild(li);
-        
+        li.innerHTML = `${novaUC} <button onclick="moveUp(this)">⬆️</button> <button onclick="moveDown(this)">⬇️</button>`;
+        document.getElementById("uc-lista").appendChild(li);
     }
 }
 
-function moveUp(bnt){
-    const li = bnt.parentElement;
+function moveUp(btn) {
+    const li = btn.parentElement;
     const prev = li.previousElementSibling;
-    if(prev) {
+    if (prev) {
         li.parentElement.insertBefore(li, prev);
     }
 }
 
-function moveDown(bnt){
-    const li = bnt.parentElement;
+function moveDown(btn) {
+    const li = btn.parentElement;
     const next = li.nextElementSibling;
-    if(next) {
+    if (next) {
         li.parentElement.insertBefore(next, li);
     }
 }
+
+document.getElementById("add-uc").addEventListener("click", adicionarUC);
+
 
 function validarCPF(cpf){
     const regex = /^\d{3}\.\d{3}\.\d{3}-\d{2}$/;
@@ -60,4 +62,3 @@ function adicionarInfoPerfil() {
     document.getElementById("nova-info").value = "";
   }
 }
-
