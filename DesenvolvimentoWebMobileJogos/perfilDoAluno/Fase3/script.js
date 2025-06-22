@@ -36,23 +36,33 @@ function validarEmail(email) {
   return regex.test(email);
 }
 
-document.getElementById("cpf").addEventListener("blur", function() {
+function validarCampoCPF() {
     const erro = document.getElementById("cpf-incorreto");
-    if (!validarCPF(this.value)){
-        erro.textContent = "CPF inválido."
+    const valorCPF = document.getElementById("cpf").value;
+    if (!validarCPF(valorCPF)) {
+        erro.textContent = "CPF inválido.";
     } else {
         erro.textContent = "";
     }
-});
+}
 
-document.getElementById("email").addEventListener("blur", function () {
-  const erro = document.getElementById("email-error");
-  if (!validarEmail(this.value)) {
-    erro.textContent = "E-mail inválido.";
-  } else {
-    erro.textContent = "";
-  }
-});
+document.getElementById("cpf").addEventListener("blur", validarCampoCPF);
+document.getElementById("validar-cpf-btn").addEventListener("click", validarCampoCPF);
+
+
+function validarCampoEmail() {
+    const erro = document.getElementById("email-error");
+    const valorEmail = document.getElementById("email").value;
+    if (!validarEmail(valorEmail)) {
+        erro.textContent = "Email inválido.";
+    } else {
+        erro.textContent = "";
+    }
+}
+
+document.getElementById("email").addEventListener("blur", validarCampoEmail);
+document.getElementById("validar-email-btn").addEventListener("click", validarCampoEmail);
+
 
 function adicionarInfoPerfil() {
   const texto = document.getElementById("nova-info").value.trim();
@@ -62,3 +72,14 @@ function adicionarInfoPerfil() {
     document.getElementById("nova-info").value = "";
   }
 }
+
+function adicionarInfo() {
+  const texto = document.getElementById("nova-info2").value.trim();
+  const paragrafo = document.getElementById("perfil-profissional-academico");
+  if (texto !== "") {
+    paragrafo.innerHTML += " " + texto;
+    document.getElementById("nova-info2").value = "";
+  }
+}
+
+

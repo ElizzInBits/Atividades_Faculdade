@@ -61,6 +61,7 @@
         <div class="info-item">
             <h2>Email</h2>
             <input type="email" id="email" placeholder="exemplo@email.com" />
+            <button id="validar-email-btn">Validar email</button>
             <span id="email-error" style="color: red;"></span>
 
 
@@ -69,6 +70,7 @@
         <div class="info-item">
             <h2>CPF</h2>
             <input type="text" id="cpf" placeholder="123.456.789-00" />
+            <button id="validar-cpf-btn">Validar CPF</button>
             <span id="cpf-incorreto" style="color: red;"></span>
         </div>
 
@@ -99,11 +101,14 @@
 
         <div class="info-item">
             <h2>Perfil Proficional/Academico</h2>
-            <p>Na minha vida acadêmica, iniciei cedo os estudos sobre computação e tecnologia. Achava o máximo aqueles hackers falsos de filme e, tentando me tornar um, acabei detonando dois computadores com vírus. No entanto, aprendi muita coisa relacionada à segurança.
+            <p id="perfil-profissional-academico">Na minha vida acadêmica, iniciei cedo os estudos sobre computação e tecnologia. Achava o máximo aqueles hackers falsos de filme e, tentando me tornar um, acabei detonando dois computadores com vírus. No entanto, aprendi muita coisa relacionada à segurança.
             Na adolescência, meu foco foi a programação. A primeira linguagem com a qual tive contato foi Python, e com ela comecei a criar pequenos projetos.
-            Depois, decidi ingressar em um curso técnico de informática. Durante o curso, adquiri uma base inicial para diversas áreas da tecnologia, o que me motivou ainda mais a entrar no curso de Ciência da Computação.
-            Em julho de 2023, mudei-me para Belo Horizonte para iniciar minha graduação em Ciência da Computação na UNI-BH. No segundo semestre (2024.1), conquistei meu primeiro estágio na área de TI, atuando com Help Desk (Infra), função que ainda exerço em 2025.1. Esse estágio me proporcionou uma visão mais ampla do funcionamento do ambiente empresarial e me ajudou a desenvolver habilidades para buscar soluções de forma rápida e eficiente.
+            Depois, decidi ingressar em um curso técnico de informática. Durante o curso, adquiri uma base inicial para diversas áreas da tecnologia, o que meincentivou e motivou ainda mais a entrar no curso de Ciência da Computação.
+            Em julho de 2023, me mudei para Belo Horizonte para iniciar minha graduação em Ciência da Computação na UNI-BH. No segundo semestre (2024.1), consegui meu primeiro estágio na área de TI, atuando com Help Desk (Infra), função que ainda exerço em 2025.1. Esse estágio me proporcionou uma visão mais ampla do funcionamento do ambiente empresarial e me ajudou a desenvolver habilidades para buscar soluções de forma rápida e eficiente.
             Atualmente, estou no 4º semestre e busco novas oportunidades de estágio na área de tecnologia para atuar em diferentes funções e adquirir mais experiência antes da minha formação.</p>
+
+            <textarea id="nova-info2" rows="3" placeholder="Adicione mais..."></textarea><br>
+            <button onclick="adicionarInfo()">Adicionar</button>
         </div>
     </div>
 
