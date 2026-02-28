@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do aluno</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="container">
+    <header>
+        <h1>Perfil do Aluno</h1>
+    </header>
+    
+    <div class="profile-images">
+        <h2>Fotos</h2>
+        <div class="carrossel">
+            <!-- Controle de cada imagem -->
+            <input type="radio" name="carrossel" id="img1" checked>
+            <input type="radio" name="carrossel" id="img2">
+            <input type="radio" name="carrossel" id="img3">
+            
+            <!-- Imagens do carrossel -->
+            <div class="carrossel-imagens">
+                <div class="carrossel-item">
+                    <img src="imagens/fotos/Foto1.jpg" alt="Foto1">
+                </div>
+                <div class="carrossel-item">
+                    <img src="imagens/fotos/Foto2.jpg" alt="Foto2">
+                </div>
+                <div class="carrossel-item">
+                    <img src="imagens/fotos/Foto3.jpg" alt="Foto3">
+                </div>
+            </div>
+            
+            <!-- Indicadores para as imagens -->
+            <div class="carrossel-indicadores">
+                <label for="img1"></label>
+                <label for="img2"></label>
+                <label for="img3"></label>
+            </div>
+        </div>
+    </div>
+
+    <div class="info-section">
+        <div class="info-item">
+            <h2>Nome Completo</h2>
+            <p>Elizabeth Stéphany Guimarães Miranda.</p>
+        </div>
+
+        <div class="info-item">
+            <h2>Curso e Período Atual</h2>
+            <p>Ciência da Computação, 4º período.</p>
+        </div>
+
+        <div class="info-item">
+            <h2>Endereço Completo</h2>
+            <p>Caiçaras BH, Rua Lunardi</p>
+        </div>
+
+        <div class="info-item">
+            <h2>Email</h2>
+            <input type="email" id="email" placeholder="exemplo@email.com" />
+            <button id="validar-email-btn">Validar email</button>
+            <span id="email-error" style="color: red;"></span>
+
+
+        </div>
+
+        <div class="info-item">
+            <h2>CPF</h2>
+            <input type="text" id="cpf" placeholder="123.456.789-00" />
+            <button id="validar-cpf-btn">Validar CPF</button>
+            <span id="cpf-incorreto" style="color: red;"></span>
+        </div>
+
+        <div class="info-item">
+            <h2>UC já Cursadas</h2>
+            <ul id="uc-lista">
+                <li>Ambientes Computacionais e Conectiviadade <button onclick="moveUp(this)">⬆️</button> <button onclick="moveDown(this)">⬇️</button></li>
+                <li>Sistemas Computacionais e Segurança <button onclick="moveUp(this)">⬆️</button> <button onclick="moveDown(this)">⬇️</button></li>
+                <li>Modelagem de Software <button onclick="moveUp(this)">⬆️</button> <button onclick="moveDown(this)">⬇️</button></li>
+                <li>Programação de Soluções Computacionais <button onclick="moveUp(this)">⬆️</button> <button onclick="moveDown(this)">⬇️</button></li>
+                <li>Análise de Big Data <button onclick="moveUp(this)">⬆️</button> <button onclick="moveDown(this)">⬇️</button></li>
+                <li>Inteligência Atificial <button onclick="moveUp(this)">⬆️</button> <button onclick="moveDown(this)">⬇️</button></li>
+                <li>Gestão de qualidade de Software <button onclick="moveUp(this)">⬆️</button> <button onclick="moveDown(this)">⬇️</button></li>
+                <li>Usabilidade, Desenvolvimento web, mobile e jogos <button onclick="moveUp(this)">⬆️</button> <button onclick="moveDown(this)">⬇️</button></li>
+            </ul>
+            <button id="add-uc">Adicionar nova UC</button>
+        </div>
+     </div>   
+
+    <div class="perfil-text">
+        <div class="section">
+            <h2>Pefil Pessoal</h2>
+            <p id="perfil-pessoal-texto">No meu tempo livre, gosto de sair para andar de skate, ficar em casa jogando algum game ou assistindo algo. Também gosto de cozinhar para alguém e estou sempre escutando música, porque acho que minha vida precisa ter uma trilha sonora de fundo. </p>
+
+            <textarea id="nova-info" rows="3" placeholder="Adicione mais sobre você..."></textarea><br>
+            <button onclick="adicionarInfoPerfil()">Adicionar</button>
+        </div>
+
+        <div class="info-item">
+            <h2>Perfil Proficional/Academico</h2>
+            <p id="perfil-profissional-academico">Na minha vida acadêmica, iniciei cedo os estudos sobre computação e tecnologia. Achava o máximo aqueles hackers falsos de filme e, tentando me tornar um, acabei detonando dois computadores com vírus. No entanto, aprendi muita coisa relacionada à segurança.
+            Na adolescência, meu foco foi a programação. A primeira linguagem com a qual tive contato foi Python, e com ela comecei a criar pequenos projetos.
+            Depois, decidi ingressar em um curso técnico de informática. Durante o curso, adquiri uma base inicial para diversas áreas da tecnologia, o que meincentivou e motivou ainda mais a entrar no curso de Ciência da Computação.
+            Em julho de 2023, me mudei para Belo Horizonte para iniciar minha graduação em Ciência da Computação na UNI-BH. No segundo semestre (2024.1), consegui meu primeiro estágio na área de TI, atuando com Help Desk (Infra), função que ainda exerço em 2025.1. Esse estágio me proporcionou uma visão mais ampla do funcionamento do ambiente empresarial e me ajudou a desenvolver habilidades para buscar soluções de forma rápida e eficiente.
+            Atualmente, estou no 4º semestre e busco novas oportunidades de estágio na área de tecnologia para atuar em diferentes funções e adquirir mais experiência antes da minha formação.</p>
+
+            <textarea id="nova-info2" rows="3" placeholder="Adicione mais..."></textarea><br>
+            <button onclick="adicionarInfo()">Adicionar</button>
+        </div>
+    </div>
+
+    <div class="redes-sociais">           
+        <h2>Redes sociais</h2>
+        <ul>
+            <li><img src="imagens/redes-sociais/Instagram.png" alt="Instagram"><a href="https://www.instagram.com/bett_y.png/" target="_blank" rel="">/bett_y.png</a> Me siga no Instagram!</li>
+            <li><img src="imagens/redes-sociais/Linkedin.png" alt="Linkedin"> <a href="https://www.linkedin.com/in/elizabeth-guimar%C3%A3es-6a17a922b/" target="_blank">/Elizabeth Guimarães</a> Conecte-se a mim no Linkedin</li>
+            <li><img src="imagens/redes-sociais/GitHub.png" alt="GitHub"><a href="https://github.com/ElizzInBits" target="_blank">/ElizzInBits</a> Venha ver meus repositórios no GitHub</li>
+        </ul>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
