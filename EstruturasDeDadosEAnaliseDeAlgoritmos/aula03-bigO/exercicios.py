@@ -100,7 +100,7 @@ def merge_sort(lista):
     return resultado
 
 
-# Testes básicos para execução local
+# Testes básicos
 if __name__ == "__main__":
     lista = [1, 3, 5, 7, 9, 11]
 
