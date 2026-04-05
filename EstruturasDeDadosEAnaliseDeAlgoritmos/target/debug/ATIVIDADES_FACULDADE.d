@@ -1,0 +1,1 @@
+C:\Users\eliza\OneDrive\Documentos\MeusProjetos\Atividades_Faculdade\EstruturasDeDadosEAnaliseDeAlgoritmos\target\debug\ATIVIDADES_FACULDADE.exe: C:\Users\eliza\OneDrive\Documentos\MeusProjetos\Atividades_Faculdade\EstruturasDeDadosEAnaliseDeAlgoritmos\src\main.rs
