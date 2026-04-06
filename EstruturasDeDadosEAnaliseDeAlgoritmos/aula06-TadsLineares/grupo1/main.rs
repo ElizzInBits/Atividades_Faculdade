@@ -42,11 +42,13 @@ fn main() {
         println!("Contagem das letras:{:?}", contagem_letras);
 
 
+
+
     // 3. Remoção condicional remover numeros pares
 
-    fn remover_numeros(v: Vec<i32>, _numero: i32) -> Vec<i32> { // A função recebe um vetor de inteiros e um número específico, e retorna um novo vetor contendo apenas os elementos que são diferentes do número especificado.
+    fn remover_pares(v: Vec<i32>) -> Vec<i32> { // A função recebe um vetor de inteiros e um número específico, e retorna um novo vetor contendo apenas os elementos que são diferentes do número especificado.
 
-         let mut resultado = Vec::new();
+         let mut resultado = Vec::new(); // Cria um novo vetor vazio para armazenar os elementos que não são iguais ao número especificado.
 
         for valor in v {
             if valor %  2 != 0 {
@@ -58,7 +60,7 @@ fn main() {
     }
 
     let numeros = vec![1,2,3,4,5,6,7,8,9,10];
-    let sempares = remover_numeros(numeros,2);
+    let sempares = remover_pares(numeros);
     println!("Números sem os pares: {:?}", sempares);
 
 
